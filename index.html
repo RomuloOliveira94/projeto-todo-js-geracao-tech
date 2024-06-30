@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geração Tech JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <input type="text" id="busca" placeholder="Pesquisar por título" />
+    </header>
+
+    <main>
+      <section id="tarefas">
+        <h2>Tarefas <button onclick="novaTarefa()">Nova Tarefa</button></h2>
+        <ul id="lista">
+        </ul>
+      </section>
+
+      <section id="overlay"></section>
+      <div id="criarTarefa" class="modal">
+        <div class="modalHeader">
+          <h2>Nova Tarefa</h2>
+          <button onclick="fecharTarefa()">
+            <box-icon name="x" size="md"></box-icon>
+          </button>
+        </div>
+        <form onsubmit="inserirTarefa()">
+          <label for="titulo">Título</label>
+          <input type="text" id="titulo" required />
+
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" required></textarea>
+
+          <label for="data">Data</label>
+          <input type="date" id="data" required />
+
+          <button>Salvar</button>
+          <button type="button" onclick="fecharTarefa()">Cancelar</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>

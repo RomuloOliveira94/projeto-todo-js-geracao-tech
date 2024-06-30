@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: blueviolet;
+  padding: 16px 120px;
+}
+
+header input {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+#tarefas h2 {
+  padding: 60px 120px;
+}
+
+#tarefas h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 48px;
+}
+
+#tarefas h2 button {
+  height: 46px;
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+#tarefas h2 button:hover {
+  background-color: darkviolet;
+}
+
+#tarefas h6 {
+  text-align: center;
+  font-size: 24px;
+  color: #999;
+}
+
+#tarefas ul {
+  padding: 0 120px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#tarefas ul li {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  text-wrap: wrap;
+  gap: 12px;
+  width: 300px;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+
+#tarefas ul li button {
+  background-color: blueviolet;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 200ms;
+  flex: 1;
+}
+
+#tarefas ul li button:hover {
+  background-color: darkviolet;
+}
+
+.botoesTarefa {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 8px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  opacity: 0;
+  transition-duration: 200ms;
+}
+
+#overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  transition-duration: 200ms;
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal h2 {
+  font-size: 24px;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  transition-duration: 200ms;
+}
+
+#descricao {
+  height: 80px;
+  padding: 8px;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  border-color: blueviolet;
+}
+.modal form {
+  display: grid;
+  gap: 8px;
+}
+
+.modal form button {
+  width: 100%;
+  height: 40px;
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modalHeader button {
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.modalHeader button:hover {
+  border-radius: 100%;
+  color: white;
+  fill: white;
+  background-color: darkviolet;
+}
