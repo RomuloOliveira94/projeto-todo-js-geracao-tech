@@ -97,6 +97,10 @@ header input {
   background-color: darkviolet;
 }
 
+#tarefas ul li.oculto {
+  display: none;
+}
+
 .botoesTarefa {
   display: flex;
   justify-content: space-between;
@@ -210,3 +214,4 @@ header input {
   fill: white;
   background-color: darkviolet;
 }
+

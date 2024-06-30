@@ -73,4 +73,22 @@ function formatDate(data) {
   return dataFormatada.toLocaleDateString("pt-BR", options);
 }
 
+function pesquisarTarefas() {
+  const taskLi = document.querySelectorAll("ul li");
+  
+  if (busca.value.length > 0) {
+    taskLi.forEach((li) => {
+      if (li.children[1].innerText.toLowerCase().includes(busca.value.toLowerCase())) {
+        li.classList.remove("oculto");
+      } else {
+        li.classList.add("oculto");
+      }
+    })
+  } else {
+    taskLi.forEach((li) => {
+      li.classList.remove("oculto");
+    })
+  }
+}
+
 buscarTarefas();
